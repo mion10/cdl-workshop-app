@@ -15,21 +15,20 @@ stage("integration-tests") {
 stage("acceptance-tests") {
 
     def tests = [
-            "firefox" : {
-                sleep 10
-            },
-            "chrome" : {
-                sleep 10
-            },
-            "edge" : {
-                sleep 10
-            }
+        "firefox" : {
+            sleep 10
+        },
+        "chrome" : {
+            sleep 10
+        },
+        "edge" : {
+            sleep 10
+        }
     ]
 
     node("test") {
         parallel tests
     }
-
 }
 
 stage("staging") {
