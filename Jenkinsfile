@@ -1,3 +1,5 @@
+#!/usr/bin/env groovy
+
 stage("build & unit tests") {
     node("build") {
         sleep 10
